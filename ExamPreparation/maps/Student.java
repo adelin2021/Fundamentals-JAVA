@@ -12,17 +12,6 @@ public class Student {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 
-//        Vladi 5.6
-//        Kiko 6.00
-//        Gosho 6.00
-//        Marto 3.00
-//        Mara 4.00
-//        Pesho 2.00
-//        Vladi 5.7
-//        Kriso 5.36
-//        Marto 5
-//        print
-
         Map<String ,Double> students = new LinkedHashMap<>();
 
         while (true){
