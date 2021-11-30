@@ -8,18 +8,24 @@ public class Pirates {
 
         String input = scanner.nextLine();
 
-        Map<String,int[]> piratesHistory = new LinkedHashMap<>();
+        Map<String, int[]> piratesHistory = new LinkedHashMap<>();
 
-        while (!input.equals("Sail")){
+        while (!input.equals("Sail")) {
             String[] info = input.split("\\|\\|");
-String cityName = info[0];
-if(piratesHistory.containsKey(cityName)) {
-}else{
+            String cityName = info[0];
+            int population = info[1];
+            int gold = info[2];
+            if (!piratesHistory.containsKey(cityName)) {
+                piratesHistory.putIfAbsent(cityName, new int[2]);
+                piratesHistory.get(cityName)[0] = population;
+                piratesHistory.get(cityName)[1] = gold;
+            } else {
+                piratesHistory.get(cityName)[0] += population;
+                piratesHistory.get(cityName)[1] += gold;
+            }
 
-}
 
-
-              input = scanner.nextLine();
+            input = scanner.nextLine();
         }
     }
 }
